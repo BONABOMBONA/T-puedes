@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tú puedes</title>
+  <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: #000;
+      font-family: 'Patrick Hand', cursive;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 1rem;
+    }
+
+    .carta {
+      width: 100%;
+      max-width: 700px;
+      background-color: #d2b48c;
+      border-radius: 12px;
+      box-shadow: 0 0 25px rgba(255, 255, 255, 0.1);
+      overflow: hidden;
+      transition: all 0.6s ease;
+      cursor: pointer;
+    }
+
+    .tapa {
+      background-color: transparent;
+      text-align: center;
+      padding: 2rem 1rem;
+      font-size: 1.8rem;
+      color:#111;
+      transition: transform 0.8s ease;
+    }
+
+    .contenido {
+      padding: 2rem 1.5rem;
+      font-size: 1.4rem;
+      line-height: 2.2rem;
+      color: #111;
+      display: none;
+      white-space: pre-wrap;
+    }
+
+    .carta.abierta .tapa {
+      transform: rotateX(-90deg);
+      height: 0;
+      overflow: hidden;
+      padding: 0;
+    }
+
+    .carta.abierta .contenido {
+      display: block;
+      animation: aparecer 0.6s ease;
+    }
+
+    @keyframes aparecer {
+      0% { opacity: 0; transform: translateY(-10px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 600px) {
+      .tapa {
+        font-size: 1.3rem;
+        padding: 1.5rem 1rem;
+      }
+
+      .contenido {
+        font-size: 1.1rem;
+        line-height: 1.8rem;
+        padding: 1.5rem 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="carta" id="carta">
+    <div class="tapa">
+      "QUE ESTAS PALABRAS ABRACEN TU CORAZÓN COMO TANTAS VECES TÚ ABRAZASTE EL MIO"
+    </div>
+    <div class="contenido">
+No te van a entender, no van a entender tu ilusión y tampoco han vivido tu desesperación y aunque sientas que es un caos, permite que el tiempo fluya, permítete ser principiante.
+
+Tienes toda una vida por delante llena de felicidad, con muchísimos sueños, metas e ilusiones por cumplir, por lograr, así que "Disfruta el proceso de lograrlo" aunque te parezca lejano, aunque te sea muy difícil, aunque te sea incómodo todo el proceso, lo conseguirás, conseguirás cada meta que te propongas, pero para conseguirlo tienes que actuar y el actuar no solo implica lo físico también implica lo emocional, actúa y trabaja en tus pensamientos, lo malo nunca se debe de apoderar de tu mente porque si lo hace termina apoderándose también de tus acciones, dejas de trabajar en tu ilusión para terminar en una desilusión ¿y acaso no quieres lograrlo? ¿O por qué dejarías a un lado tu sueño? Las cosas no siempre son como dice tu cabeza.
+
+Recuerda "La salvación está en uno mismo", permítete sentir todos tus sentimientos y luego, déjalos ir. Sientes prisa y desesperación pero frustrándote no consigues nada bueno, tampoco dejes que tus pensamientos impulsivos se vuelvan realidad, dejar la escuela no es opción y es un pensamiento impulsivo. Mereces todo lo que te propongas pero no es justo para tu futuro dejar todo para conseguirlo. Es justo e importante el interés que tienes y deseas para un futuro cercano pero también es justo e importante lo que necesitas para un futuro lejano. TÚ puedes conseguir las dos cosas a la vez, solo no desesperes, que el tiempo es sabio y todo llega en el momento que tiene que llegar.
+
+Mi hombre, nunca olvides que eres increíble, lo lograrás. Piensa en la satisfacción: "Lo logré", porque eres capaz. Créetelo más, trabaja día a día para que sea realidad pero sin perjudicarte, háblate bonito y si sientes que nadie te apoya, cree en ti mismo porque créeme, algún día serás y tendrás todas las cosas que amas. <3
+    </div>
+  </div>
+
+  <script>
+    const carta = document.getElementById('carta');
+    carta.addEventListener('click', () => {
+      carta.classList.add('abierta');
+    });
+  </script>
+
+</body>
+</html>
